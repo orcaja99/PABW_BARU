@@ -1,0 +1,56 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+  }
+ 
+.btn-rounded-white {
+    border-radius: 50px; /* sets the border radius to make the button rounded */
+    background-color: #ffffff; /* sets the background color to white */
+    color: #2A1B3C; /* sets the text color to black */
+}
+ 
+.hero {
+    background: linear-gradient(#2A1B3C, #44318D);
+ 
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.tab-content{
+    border-radius: 50px;
+}
+ 
+ .tab-content,
+ .tab-pane {
+    color: black;
+}
+  
+#flightsButton {
+    margin-top: 10px;
+}
+  
+.navbar {
+    background-color: #2A1B3C !important; /* sets the background color of the navbar to #2A1B3C */
+}
+
+footer{
+    background-color: #44318D;
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-link i {
+    order: -1;
+  }
+
+.uil{
+    fill: black;
+}

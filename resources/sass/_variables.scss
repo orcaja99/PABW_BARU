@@ -1,0 +1,37 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$primary: #3490dc;
+$secondary: #6c757d;
+$success: #38c172;
+$info: #6cb2eb;
+$warning: #ffed4a;
+$danger: #e3342f;
+$light: #f8fafc;
+$dark: #343a40;
+$costum: #4415a2;
+
+// Buttons
+$btn-primary-color: #335fbd;
+$btn-primary-bg: $primary;
+$btn-primary-border: $primary;
+$btn-primary-hover-color: #fff;
+$btn-primary-hover-bg: darken($primary, 10%);
+$btn-primary-hover-border: darken($primary, 10%);
+$btn-primary-active-color: #fff;
+$btn-primary-active-bg: darken($primary, 10%);
+$btn-primary-active-border: darken($primary, 10%);

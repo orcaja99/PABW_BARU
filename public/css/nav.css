@@ -1,0 +1,24 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+}
+
+.btn-rounded-white {
+  border-radius: 50px; /* sets the border radius to make the button rounded */
+  background-color: #ffffff; /* sets the background color to white */
+  color: #2A1B3C; /* sets the text color to black */
+}
+
+.navbar {
+  background-color: #2A1B3C !important; /* sets the background color of the navbar to #2A1B3C */
+}
+
+.nav-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link i {
+  order: -1;
+}

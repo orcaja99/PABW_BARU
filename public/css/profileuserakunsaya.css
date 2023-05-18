@@ -1,0 +1,38 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: lightblue;
+}
+
+.btn-rounded-black {
+    border-radius: 50px;
+    background-color: white;
+    color: #2A1B3C;
+}
+
+.main {
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    background-color: whitesmoke;
+}
+
+footer {
+    background-color: #44318D;
+}
+
+.navbar {
+    background-color: #2A1B3C !important;
+    /* sets the background color of the navbar to #2A1B3C */
+}
+
+.col {
+    font-size: 24px;
+}
