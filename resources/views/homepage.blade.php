@@ -54,6 +54,7 @@
         </ul>
   
         <!-- isi tabs-->
+        
         <div class="tab-content bg-white border border-secondary border-1 rounded p-3 shadow text-black" id="myTabContent">
   
           <div class="tab-pane fade show active" id="pesawat" role="tabpanel" aria-labelledby="pesawat-tab">
