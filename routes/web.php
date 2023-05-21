@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\homepageController;
 use App\Http\Controllers\ThController;
+use App\Http\Controllers\KursiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('tiket_penerbangans', KursiController::class);
 });
 
 
@@ -72,6 +74,10 @@ Route::get('/homepage',function () {
     return view('homepage');
 });
 
+Route::get('/tiket_penerbangans',function () {
+    return view('tiket_penerbangans');
+});
+
 
 
 
@@ -81,3 +87,4 @@ Route::get('userview','App\Http\Controllers\userviewcontroller@index');
 Route::resource('homepage',homepageController::class);
 //Route::get('/homepage', homepageController::class);
 route::resource('kamar_hotels',ThController::class);
+route::resource('tiket_penerbangans',KursiController::class);
