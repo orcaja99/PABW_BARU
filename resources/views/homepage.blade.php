@@ -27,6 +27,7 @@
       </li>
     </ul>
   
+<<<<<<< HEAD
     <!-- isi tabs-->
         
     <div class="tab-content bg-white border border-secondary border-1 rounded p-3 shadow text-black" id="myTabContent">
@@ -37,15 +38,49 @@
           <div class="container">
           <h3 class="lab mt-3">Penerbangan</h3>
             @foreach ($tiket_penerbangans as $tiket_penerbangan)
+=======
+        </ul>
+  
+<<<<<<< Updated upstream
+        <!-- isi tabs-->
+        <div class="tab-content bg-white border border-secondary border-1 rounded p-3 shadow text-black" id="myTabContent">
+  
+          <div class="tab-pane fade show active" id="pesawat" role="tabpanel" aria-labelledby="pesawat-tab">
+            <h3 class="lab mt-3">Penerbangan</h3>
+  
+            <form class="d-flex flex-column align-items-center">
+              
+                <div class="col">
+                  <label for="tanggal">Tanggal Pergi:</label>
+                  <input type="date" name="tanggal" class="form-control" id="tanggal">
+=======
+      <div class="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
+        <!-- <h3 class="lab mb-10">Hotel</h3> -->
+        <form class="d-flex flex-column align-items-center">
+          <!-- ISI LIST $kamar_hotels -->
+          
+          <div class="container">
+          <h3 class="lab mb-10">Hotel</h3>
+            @foreach ($kamar_hotels as $kamar_hotel)
+>>>>>>> origin/tampilan_tambah
             <div class="card mb-3 shadow">
               <div class="card-body">
                 <div class="row align-items-center mb-3">
                   <div class="col">
+<<<<<<< HEAD
                     <h5 class="card-title">{{ $tiket_penerbangan->nama_tiket }}</h5>
                   </div>
                   <div class="col text-end fs-5">
                     {{ $tiket_penerbangan->maskapai }}
                   </div>
+=======
+                    <h5 class="card-title">{{ $kamar_hotel->nama_kamar }}</h5>
+                  </div>
+                  <div class="col text-end fs-5">
+                    {{ $kamar_hotel->hotel }}
+                  </div>
+>>>>>>> Stashed changes
+>>>>>>> origin/tampilan_tambah
                 </div>
                 <div class= "row align-items-center mt-3 fs-5">
                   <p class="card-text col">tanggal</p>
@@ -115,8 +150,7 @@
   <footer class="text-white py-2">
     <div class="container mt-1 d-flex justify-content-center">
       <a class="navbar-brand" href="#">
-        <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">
-        2023
+        <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">&#169; 2023
       </a>
     </div>
   </footer>
