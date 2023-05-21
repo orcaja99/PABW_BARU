@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100 ">
@@ -47,7 +46,7 @@
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="submit" class="btn btn-primary btn-lg"
+              <button type="submit" class="btn btn-danger btn-lg"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">{{ __('Login') }}</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? 
                 <a href="/register"class="link-danger">Register</a>
