@@ -23,7 +23,13 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">TicketinPay</li>
                 <label for="exampleFormControlInput1" class="form-label">Saldo</label>
-                <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->name }}" aria-label="Disabled input example" disabled></li>
+                <div class="input-group p-5">
+                  <span class="input-group-text">Rp</span>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest rupiah)">
+                  <span class="input-group-text">.00</span>
+                </div>
+
+                <!-- <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->name }}" aria-label="Disabled input example" disabled></li> -->
                 <!-- <label for="exampleFormControlInput1" class="form-label">Email</label>
                 <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->email }}" aria-label="Disabled input example" disabled></li>
                 <label for="exampleFormControlInput1" class="form-label">Jenis Kelamin</label>

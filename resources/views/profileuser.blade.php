@@ -23,9 +23,9 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Data Pribadi</li>
               <label for="exampleFormControlInput1" class="form-label">Nama Lengkap</label>
-              <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->name }}" aria-label="Disabled input example" disabled></li>
+              <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->name }}"></li>
               <label for="exampleFormControlInput1" class="form-label">Email</label>
-              <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->email }}" aria-label="Disabled input example" disabled></li>
+              <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->email }}"></li>
               <label for="exampleFormControlInput1" class="form-label">Jenis Kelamin</label>
               <select class="form-control" id="dropdown" name="dropdown">
                 <option value="option1">Laki-laki</option>
