@@ -17,7 +17,15 @@ class PermissionTableSeeder extends Seeder
             'tiket_penerbangan-list',
             'tiket_penerbangan-create',
             'tiket_penerbangan-edit',
-            'tiket_penerbangan-delete'
+            'tiket_penerbangan-delete',
+            'role-list',
+            'role-create',
+            'role-edit',
+            'role-delete',
+            'kamar-hotel-list',
+            'kamar-hotel-create',
+            'kamar-hotel-edit',
+            'kamar-hotel-delete',
          ];
          
          foreach ($permissions as $permission) {

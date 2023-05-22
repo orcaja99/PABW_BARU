@@ -95,7 +95,7 @@
 
                 <div class= "row">
                   <div class= "col text-end">
-                    <a href="#" class="btn btn-primary rounded-pill">Pesan Sekarang</a>
+                    <a href={{ route('pesanan.kamar', ['id' => $kamar_hotel->id]) }} class="btn btn-primary rounded-pill">Pesan Sekarang</a>
                   </div>
                 </div>
               </div> 

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\homepageController;
 use App\Http\Controllers\ThController;
 use App\Http\Controllers\KursiController;
+use App\Http\Controllers\PesanKamarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,3 +89,5 @@ Route::resource('homepage',homepageController::class);
 //Route::get('/homepage', homepageController::class);
 route::resource('kamar_hotels',ThController::class);
 route::resource('tiket_penerbangans',KursiController::class);
+
+Route::get('/pesanan-kamar-hotel/{id}', [PesanKamarController::class,'detail'])-> name('pesanan.kamar');

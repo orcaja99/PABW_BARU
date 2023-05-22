@@ -89,4 +89,9 @@ class ThController extends Controller
   
         return redirect('/kamar_hotels')->with('success','Product deleted successfully');
     }
+
+    public function detail($id)
+    {
+        return kamar_hotel::find($id);
+    }
 }
