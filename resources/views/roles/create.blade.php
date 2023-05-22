@@ -2,6 +2,7 @@
 
 
 @section('content')
+<section class="m-5">
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
@@ -50,7 +51,7 @@
     </div>
 </div>
 {!! Form::close() !!}
+</section>
 
 
-<p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
 @endsection
