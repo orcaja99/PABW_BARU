@@ -14,10 +14,10 @@ class PermissionTableSeeder extends Seeder
     public function run(): void
     {
         $permissions = [
-            'tiket_penerbangan-list',
-            'tiket_penerbangan-create',
-            'tiket_penerbangan-edit',
-            'tiket_penerbangan-delete'
+            'kamar_hotel-list',
+            'kamar_hotel-create',
+            'kamar_hotel-edit',
+            'kamar_hotel-delete',
          ];
          
          foreach ($permissions as $permission) {
