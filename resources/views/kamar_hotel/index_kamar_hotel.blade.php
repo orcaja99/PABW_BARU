@@ -7,7 +7,9 @@
                 <h2>Menu CRUD Kamar Hotel</h2>
             </div>
             <div class="pull-right">
+                @can('kamar_hotel-create')
                 <a class="btn btn-success" href="{{ route('kamar_hotels.create') }}"> Masukkan Kamar Hotel</a>
+                @endcan
             </div>
         </div>
     </div>
@@ -38,13 +40,15 @@
                 <form action="{{ route('kamar_hotels.destroy',$kamar_hotel->id) }}" method="POST">
    
                     <a class="btn btn-info" href="{{ route('kamar_hotels.show',$kamar_hotel->id) }}">Show</a>
-    
+                    @can('kamar_hotel-edit')
                     <a class="btn btn-primary" href="{{ route('kamar_hotels.edit',$kamar_hotel->id) }}">Edit</a>
-   
+                    @endcan
+
                     @csrf
                     @method('DELETE')
-      
+                    @can('kamar_hotel-delete')
                     <button type="submit" class="btn btn-danger">Delete</button>
+                    @endcan
                 </form>
             </td>
         </tr>
