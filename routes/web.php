@@ -35,8 +35,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
-    Route::resource('tiket_penerbangans', KursiController::class);
-    Route::resource('kamar_hotels', KamarController::class);
+    Route::resource('tiket_penerbangans', KursiController::class)->middleware('auth');
+    Route::resource('kamar_hotels', ThController::class)->middleware('auth');
 });
 
 
@@ -76,9 +76,9 @@ Route::get('/homepage',function () {
     return view('homepage');
 });
 
-Route::get('/tiket_penerbangans',function () {
-    return view('tiket_penerbangans');
-});
+// Route::get('/tiket_penerbangans',function () {
+    // return view('tiket_penerbangans');
+// });
 
 
 
