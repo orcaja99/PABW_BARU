@@ -23,9 +23,11 @@ use App\Http\Controllers\PesanKamarController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('homepage');
+// });
+
+Route::get('/', [homepageController::class, 'index'])->name('homepage');
 
 Auth::routes();
 
@@ -88,7 +90,7 @@ Route::get('/homepage',function () {
 Route::get('userview','App\Http\Controllers\userviewcontroller@index');
 Route::resource('homepage',homepageController::class);
 //Route::get('/homepage', homepageController::class);
-// route::resource('kamar_hotels',ThController::class);
-// route::resource('tiket_penerbangans',KursiController::class);
+route::resource('kamar_hotels',ThController::class);
+route::resource('tiket_penerbangans',KursiController::class);
 
 Route::get('/pesanan-kamar-hotel/{id}', [PesanKamarController::class,'detail'])-> name('pesanan.kamar');
