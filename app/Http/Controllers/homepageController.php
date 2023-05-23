@@ -15,8 +15,6 @@ class homepageController extends Controller
         $kamar_hotels = kamar_hotel::latest()->paginate(5);
         return view('homepage',compact('kamar_hotels','tiket_penerbangans'));
 
-    }
-
-    
+    }  
 }
 
