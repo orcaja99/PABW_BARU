@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-route::resource('tiket_penerbangans',KursiController::class);
+// route::resource('tiket_penerbangans',KursiController::class);

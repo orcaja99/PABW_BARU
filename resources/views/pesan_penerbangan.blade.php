@@ -32,23 +32,21 @@
             <div class="card-body">
                 <div class="row align-items-center mb-3">
                     <div class="col">
-                        <h5 class="card-title">Nama Maskapai</h5>
+                        <h5 class="card-title">{{ $tiket_penerbangan['nama_tiket']}}</h5>
                     </div>
                     
                     <div class="col text-end fs-5">
-                        IDR 1.200.000
+                      {{ $tiket_penerbangan['maskapai']}}
                     </div>
                 </div>
                 
                 <div class= "row align-items-center fs-6">
-                    <p class="card-text col">02.45</p>
-                    <p class="card-text col">05.30</p>
-                    <p class="card-text col">2j 10m</p>
+                    <p class="card-text col">{{ $tiket_penerbangan['harga']}}</p>
+                    <p class="card-text col">{{ $tiket_penerbangan['tanggal']}}</p>
                 </div>
                 <div class= "row align-items-center">
-                    <p class="card-text col">BPN</p>
-                    <p class="card-text col">CGK</p>
-                    <p class="card-text col">Durasi</p>
+                    <p class="card-text col">Harga</p>
+                    <p class="card-text col">tanggal</p>
                 </div>
                 </div>
             </div>

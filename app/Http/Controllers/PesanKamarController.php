@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\kamar_hotel;
-use App\Models\tiket_penerbangan;
 
 
 class PesanKamarController extends Controller
 {
+
+
     public function index()
     {
         $kamar_hotels = kamar_hotel::all();

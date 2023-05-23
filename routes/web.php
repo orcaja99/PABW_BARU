@@ -28,9 +28,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-  
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-  
+
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
@@ -88,7 +88,7 @@ Route::get('/tiket_penerbangans',function () {
 Route::get('userview','App\Http\Controllers\userviewcontroller@index');
 Route::resource('homepage',homepageController::class);
 //Route::get('/homepage', homepageController::class);
-route::resource('kamar_hotels',ThController::class);
-route::resource('tiket_penerbangans',KursiController::class);
+// route::resource('kamar_hotels',ThController::class);
+// route::resource('tiket_penerbangans',KursiController::class);
 
 Route::get('/pesanan-kamar-hotel/{id}', [PesanKamarController::class,'detail'])-> name('pesanan.kamar');
