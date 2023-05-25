@@ -2,6 +2,7 @@
   
 @section('content')
 <div class="row">
+<link href="/css/role.css" rel="stylesheet">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Add New Product</h2>
