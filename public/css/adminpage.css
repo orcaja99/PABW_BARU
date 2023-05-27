@@ -1,21 +1,18 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff;
-  }
- 
+
 .btn-rounded-white {
     border-radius: 50px; /* sets the border radius to make the button rounded */
     background-color: #ffffff; /* sets the background color to white */
     color: #2A1B3C; /* sets the text color to black */
 }
 
-.navbar {
-    background-color: #2A1B3C !important; /* sets the background color of the navbar to #2A1B3C */
+.sidebar {
+    background: linear-gradient(#2a1b3c, #44318D); !important; /* sets the background color of the navbar to #2A1B3C */
 }
 
-footer{
-    background-color: #44318D;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.nav-link{
+    margin-top: 1rem;
+}
+
+.nav-link:hover{
+    background-color: #2a1b3c;
 }

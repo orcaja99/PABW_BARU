@@ -11,6 +11,7 @@ use App\Http\Controllers\homepageController;
 use App\Http\Controllers\ThController;
 use App\Http\Controllers\KursiController;
 use App\Http\Controllers\PesanKamarController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::get('/', [homepageController::class, 'index'])->name('homepage');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::resource("/admin/page", PageController::class);
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
@@ -66,6 +69,10 @@ Route::get('/adminpage',function () {
     return view('adminpage');
 });
 
+Route::get('/admin',function () {
+    return view('/admin/admin');
+});
+
 Route::get('/ticket',function () {
     return view('ticket');
 });
@@ -81,10 +88,6 @@ Route::get('/homepage',function () {
 // Route::get('/tiket_penerbangans',function () {
     // return view('tiket_penerbangans');
 // });
-
-
-
-
 
 //ini buat nampilin user ke page admin
 Route::get('userview','App\Http\Controllers\userviewcontroller@index');

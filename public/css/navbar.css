@@ -1,0 +1,11 @@
+.navbar {
+    background-color: #2A1B3C !important; /* sets the background color of the navbar to #2A1B3C */
+}
+
+.sidebar {
+    flex: 0 0 280px;
+}
+
+.content {
+    flex: 1;
+}
