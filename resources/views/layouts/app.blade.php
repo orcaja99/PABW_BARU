@@ -24,7 +24,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/homepage') }}">
-                        <img src="img/TicketIn.png" alt="TicketIn" width="120" height="26">
+                        <img src="{{ asset('img/TicketIn.png') }}" alt="TicketIn" width="120" height="26">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -85,7 +85,7 @@
             <footer class="text-white mt-auto p-1">
                 <div class="container mt-1 d-flex justify-content-center">
                 <a class="navbar-brand" href="#">
-                    <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">
+                    <img src="{{ asset('img/TicketIn.png') }}" alt="Logo" width="100" height="22" class="d-inline-block align-text-top  align-items-center">
                         2023 © Kelompok 5 PABW
                 </a>
                 </div>
