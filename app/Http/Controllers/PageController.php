@@ -14,6 +14,12 @@ class PageController extends Controller
         return view('admin.page.index');
     }
 
+    public function hotel()
+    {
+        return view('admin.page.hotel');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      */

@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
@@ -32,9 +32,10 @@ Route::get('/', [homepageController::class, 'index'])->name('homepage');
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/admin', [AdminController::class, 'adminHome'])->name('admin_dashboard');
+Route::get('/admin/dash', [AdminController::class, 'adminContents'])->name('admin_dash');
 
-Route::resource("/admin/page", PageController::class);
+Route::resource("admin/page", PageController::class);
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
@@ -67,10 +68,6 @@ Route::get('/pesan',function () {
 
 Route::get('/adminpage',function () {
     return view('adminpage');
-});
-
-Route::get('/admin',function () {
-    return view('/admin/admin');
 });
 
 Route::get('/ticket',function () {
