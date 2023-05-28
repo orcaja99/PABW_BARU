@@ -1,14 +1,14 @@
 @extends('admin.admin-home')
 
 @section('admin-content')
-<section class="m-5">
+<section class="p-3">
     <link href=/css/role.css rel='stylesheet' type='text/css'>
-    <div class="row">
+    <div class="row align-items-center">
         <div class="col-lg-12 mx-auto p-2">
-            <div class="pull-left">
+            <div class="col-lg-12 d-flex justify-content-center">
                 <h2>Role Management</h2>
             </div>
-            <div class="pull-right">
+            <div class="col-lg-12 text-right mt-3">
             @can('role-create')
                 <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
             @endcan
@@ -18,13 +18,13 @@
 
 
     @if ($message = Session::get('success'))
-    <div class="alert alert-success">
+    <div class="alert alert-success mt-3">
         <p>{{ $message }}</p>
     </div>
     @endif
 
 
-    <table class="table table-bordered">
+    <table class="table table-bordered mt-3">
     <tr>
         <th>No</th>
         <th>Name</th>

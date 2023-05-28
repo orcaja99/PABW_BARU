@@ -23,7 +23,7 @@ class PageController extends Controller
 
     public function user()
     {
-        return view('admin.page.user');
+        return view('admin.page.user.index');
     }
 
     public function hotel()
@@ -33,7 +33,7 @@ class PageController extends Controller
 
     public function maskapai()
     {
-        return view('admin.page.maskapai');
+        return view('admin.page.maskapai.index');
     }
 
     public function kamar_hotel()

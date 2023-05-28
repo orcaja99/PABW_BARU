@@ -6,7 +6,7 @@
         <div class="col-md-8">
         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 align-items-center">
             <div class="col">
-                <a href="{{ route('admin.page.user') }}" class="card-link">
+                <a href="{{ route('admin.page.user.index') }}" class="card-link">
                     <div class="card radius-10 border-start border-0 border-3 border-info">
                     <div class="card-body">
                         <div class="d-flex align-items-center">
@@ -40,7 +40,7 @@
                 </a>
             </div>
             <div class="col">
-                <a href="{{ route('admin.page.maskapai') }}" class="card-link">
+                <a href="{{ route('admin.page.maskapai.index') }}" class="card-link">
                     <div class="card radius-10 border-start border-0 border-3 border-success">
                     <div class="card-body">
                         <div class="d-flex align-items-center">
