@@ -1,6 +1,6 @@
-@extends('layouts.app')
-  
-@section('content')
+@extends('admin.admin-home')
+
+@section('admin-content') 
 <div class="row">
 <link href="/css/role.css" rel="stylesheet">
     <div class="col-lg-12 margin-tb">

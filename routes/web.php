@@ -35,13 +35,16 @@ Auth::routes();
 // Admin Page
 
 Route::get('/admin', [AdminController::class, 'adminHome'])->name('admin_dashboard');
-// Route::get('/admin/dash', [AdminController::class, 'adminContents'])->name('admin_dash');
-
 Route::get('admin/page', [PageController::class, 'home'])->name('admin.page.home');
+
 Route::get('admin/page/user', [PageController::class, 'user'])->name('admin.page.user');
+
 Route::get('admin/page/hotel', [PageController::class, 'hotel'])->name('admin.page.hotel');
-Route::get('admin/page/maskapai', [PageController::class, 'maskapai'])->name('admin.page.maskapai');
 Route::get('admin/page/kamar_hotel/index_kamar_hotel', [ThController::class, 'index'])->name('admin.page.kamar_hotel.index_kamar_hotel');
+Route::get('/kamar_hotels', [ThController::class, 'index'])->name('kamar_hotels');
+
+Route::get('admin/page/maskapai', [PageController::class, 'maskapai'])->name('admin.page.maskapai');
+
 Route::get('admin/page/roles/index', [RoleController::class, 'index'])->name('admin.page.roles.index');
 
 

@@ -3,21 +3,21 @@
 @section('admin-content')
 <section class="p-3">
     <link href="/css/role.css" rel="stylesheet">
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-left">
-                    <h2>Menu CRUD Kamar Hotel</h2>
-                </div>
-                <div class="pull-right mt-3">
-                    @can('kamar_hotel-create')
-                    <a class="btn btn-success" href="{{ route('kamar_hotels.create') }}"> Masukkan Kamar Hotel</a>
-                    @endcan
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-lg-12 text-center align-items-center">
+            <h2>Kamar Hotel</h2>
         </div>
+        <div class="col-lg-12 text-center mt-3 text-right">
+            @can('kamar_hotel-create')
+            <a class="btn btn-success" href="{{ route('kamar_hotels.create') }}">Masukkan Kamar Hotel</a>
+            @endcan
+        </div>
+    </div>
+
+
 
         @if ($message = Session::get('success'))
-            <div class="alert alert-success">
+            <div class="alert alert-success mt-3">
                 <p>{{ $message }}</p>
             </div>
         @endif
