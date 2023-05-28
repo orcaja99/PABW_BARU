@@ -21,7 +21,7 @@
 <body>
     <div id="app" class="d-flex flex-column min-vh-100">
             <div> 
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/homepage') }}">
                         <img src="{{ asset('img/TicketIn.png') }}" alt="TicketIn" width="120" height="26">
@@ -77,7 +77,7 @@
             </div>
 
             <div class="flex-grow-1">
-                <main class="py-0">
+                <main class="pt-5">
                     @yield('content')
                 </main>
             </div>
@@ -92,6 +92,8 @@
             </footer>
     </div>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

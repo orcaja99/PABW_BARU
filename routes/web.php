@@ -95,7 +95,7 @@ Route::get('/homepage',function () {
 // });
 
 //ini buat nampilin user ke page admin
-Route::get('userview','App\Http\Controllers\userviewcontroller@index');
+// Route::get('userview','App\Http\Controllers\userviewcontroller@index');
 Route::resource('homepage',homepageController::class);
 //Route::get('/homepage', homepageController::class);
 route::resource('kamar_hotels',ThController::class);

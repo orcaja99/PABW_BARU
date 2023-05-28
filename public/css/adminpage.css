@@ -16,3 +16,8 @@
 .nav-link:hover{
     background-color: #2a1b3c;
 }
+
+.card-link {
+    text-decoration: none;
+  }
+  
