@@ -14,9 +14,19 @@ class PageController extends Controller
         return view('admin.page.index');
     }
 
+    public function user()
+    {
+        return view('admin.page.user');
+    }
+
     public function hotel()
     {
         return view('admin.page.hotel');
+    }
+
+    public function maskapai()
+    {
+        return view('admin.page.maskapai');
     }
 
 

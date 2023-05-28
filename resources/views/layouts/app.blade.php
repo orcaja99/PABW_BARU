@@ -19,8 +19,8 @@
     <link rel="stylesheet" type="text/css" href="/css/navbar.css">
 </head>
 <body>
-    <div id="app">
-            <div class='width=100px'> 
+    <div id="app" class="d-flex flex-column min-vh-100">
+            <div> 
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/homepage') }}">
@@ -76,11 +76,22 @@
             </nav>
             </div>
 
-            <div>
+            <div class="flex-grow-1">
                 <main class="py-0">
                     @yield('content')
                 </main>
             </div>
+
+            <footer class="text-white mt-auto p-1">
+                <div class="container mt-1 d-flex justify-content-center">
+                <a class="navbar-brand" href="#">
+                    <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">
+                        2023 © Kelompok 5 PABW
+                </a>
+                </div>
+            </footer>
     </div>
+
+
 </body>
 </html>

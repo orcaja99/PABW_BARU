@@ -111,15 +111,5 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </section>    
-
-  <footer class="text-white py-2">
-    <div class="container mt-1 d-flex justify-content-center">
-      <a class="navbar-brand" href="#">
-        <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">
-        2023
-      </a>
-    </div>
-  </footer>
-
 @endsection
 

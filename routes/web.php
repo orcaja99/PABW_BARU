@@ -32,10 +32,18 @@ Route::get('/', [homepageController::class, 'index'])->name('homepage');
 
 Auth::routes();
 
+// Admin Page
+
 Route::get('/admin', [AdminController::class, 'adminHome'])->name('admin_dashboard');
 Route::get('/admin/dash', [AdminController::class, 'adminContents'])->name('admin_dash');
 
-Route::resource("admin/page", PageController::class);
+Route::get('admin/page', [PageController::class, 'index'])->name('admin.page.index');
+Route::get('admin/page/user', [PageController::class, 'user'])->name('admin.page.user');
+Route::get('admin/page/hotel', [PageController::class, 'hotel'])->name('admin.page.hotel');
+Route::get('admin/page/maskapai', [PageController::class, 'maskapai'])->name('admin.page.maskapai');
+
+
+
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
