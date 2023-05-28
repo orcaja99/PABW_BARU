@@ -28,15 +28,8 @@
             </ul>
           </div>
         </li>
-
-        <!-- <li>
-          <a href="{{ route('admin.page.user') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.user' ? 'active' : '' }}" aria-current="page">
-            <i class="uil uil-user"></i>
-            User
-          </a>
-        </li> -->
         <li>
-          <a href="{{ route('kamar_hotel.index') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'kamar_hotel.index' ? 'active' : '' }}" aria-current="page">
+          <a href="{{ route('admin.page.kamar_hotel.index_kamar_hotel') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.kamar_hotel.index_kamar_hotel' ? 'active' : '' }}" aria-current="page">
             <i class="uil uil-building"></i>
             Hotel
           </a>

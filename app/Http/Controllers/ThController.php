@@ -32,7 +32,7 @@ class ThController extends Controller
     {
 
         $kamar_hotels = kamar_hotel::latest()->paginate(5);
-        return view('kamar_hotel.index_kamar_hotel',compact('kamar_hotels'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin/page/kamar_hotel/index_kamar_hotel',compact('kamar_hotels'))->with('i', (request()->input('page', 1) - 1) * 5);
         
     }
 

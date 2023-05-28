@@ -38,7 +38,7 @@ class PageController extends Controller
 
     public function kamar_hotel()
     {
-        return view('kamar_hotel.index');
+        return view('admin.page.kamar_hotel.index_kamar_hotel');
     }
 
 
