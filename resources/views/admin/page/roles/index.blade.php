@@ -1,7 +1,6 @@
-@extends('layouts.app')
+@extends('admin.admin-home')
 
-
-@section('content')
+@section('admin-content')
 <section class="m-5">
     <link href=/css/role.css rel='stylesheet' type='text/css'>
     <div class="row">

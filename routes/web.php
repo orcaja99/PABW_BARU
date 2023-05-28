@@ -35,12 +35,14 @@ Auth::routes();
 // Admin Page
 
 Route::get('/admin', [AdminController::class, 'adminHome'])->name('admin_dashboard');
-Route::get('/admin/dash', [AdminController::class, 'adminContents'])->name('admin_dash');
+// Route::get('/admin/dash', [AdminController::class, 'adminContents'])->name('admin_dash');
 
-Route::get('admin/page', [PageController::class, 'index'])->name('admin.page.index');
+Route::get('admin/page', [PageController::class, 'home'])->name('admin.page.home');
 Route::get('admin/page/user', [PageController::class, 'user'])->name('admin.page.user');
 Route::get('admin/page/hotel', [PageController::class, 'hotel'])->name('admin.page.hotel');
 Route::get('admin/page/maskapai', [PageController::class, 'maskapai'])->name('admin.page.maskapai');
+Route::get('kamar_hotel/index', [PageController::class, 'kamar_hotel'])->name('kamar_hotel.index');
+Route::get('admin/page/roles/index', [RoleController::class, 'index'])->name('admin.page.roles.index');
 
 
 
@@ -98,7 +100,7 @@ Route::get('/homepage',function () {
 // Route::get('userview','App\Http\Controllers\userviewcontroller@index');
 Route::resource('homepage',homepageController::class);
 //Route::get('/homepage', homepageController::class);
-route::resource('kamar_hotels',ThController::class);
+// route::resource('kamar_hotels',ThController::class);
 route::resource('tiket_penerbangans',KursiController::class);
 
 Route::get('/pesanan-kamar-hotel/{id}', [PesanKamarController::class,'detail'])-> name('pesanan.kamar');

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\RoleController;
+
 
 use Illuminate\Http\Request;
 
@@ -9,9 +11,14 @@ class PageController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function home()
+    {
+        return view('admin.page.home');
+    }
+
     public function index()
     {
-        return view('admin.page.index');
+        return view('admin.page.roles.index');
     }
 
     public function user()
@@ -27,6 +34,11 @@ class PageController extends Controller
     public function maskapai()
     {
         return view('admin.page.maskapai');
+    }
+
+    public function kamar_hotel()
+    {
+        return view('kamar_hotel.index');
     }
 
 
