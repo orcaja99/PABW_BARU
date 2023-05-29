@@ -23,26 +23,19 @@
           </a>
           <div class="collapse {{ (Route::currentRouteName() == 'admin.page.user' || Route::currentRouteName() == 'admin.page.role') ? 'show' : '' }}" id="home-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small text">
-              <li class="nav-link"><a href="{{ route('admin.page.user') }}" class="link-body-emphasis text-white d-flex text-decoration-none rounded align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.user' ? 'active' : '' }}" aria-current="page">Users</a></li>
+              <li class="nav-link"><a href="{{ route('admin.page.user.index') }}" class="link-body-emphasis text-white d-flex text-decoration-none rounded align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.user.index' ? 'active' : '' }}" aria-current="page">Users</a></li>
               <li class="nav-link"><a href="{{ route('admin.page.roles.index') }}" class="link-body-emphasis text-white d-flex text-decoration-none rounded align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.roles.index' ? 'active' : '' }}" aria-current="page">Roles</a></li>
             </ul>
           </div>
         </li>
-
-        <!-- <li>
-          <a href="{{ route('admin.page.user') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.user' ? 'active' : '' }}" aria-current="page">
-            <i class="uil uil-user"></i>
-            User
-          </a>
-        </li> -->
         <li>
-          <a href="{{ route('kamar_hotel.index') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'kamar_hotel.index' ? 'active' : '' }}" aria-current="page">
+          <a href="{{ route('admin.page.kamar_hotel.index_kamar_hotel') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.kamar_hotel.index_kamar_hotel' ? 'active' : '' }}" aria-current="page">
             <i class="uil uil-building"></i>
             Hotel
           </a>
         </li>
         <li>
-          <a href="{{ route('admin.page.maskapai') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.maskapai' ? 'active' : '' }}" aria-current="page">
+          <a href="{{ route('admin.page.maskapai.index') }}" class="nav-link text-white d-flex align-items-center gap-2 {{ Route::currentRouteName() == 'admin.page.maskapai.index' ? 'active' : '' }}" aria-current="page">
             <i class="uil uil-plane-departure"></i>
             Maskapai 
           </a>

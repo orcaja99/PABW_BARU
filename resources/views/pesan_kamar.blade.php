@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="/css/pesan.css">
 <section>
   <h1 class= "p-5 text-center fs-3">Detail Pemesanan </h1>
+=======
+    <h1 class= "text-center fs-3 mt-5 p-5">Detail Pemesanan </h1>
+>>>>>>> 0006bc434e8f456b7a8f332adbc6e83dc7f52b5b
     <div class="container mt-4">
       <div class="row">
         <div class="col-md-4">
@@ -21,8 +25,8 @@
                 </div>
                 
                 <div class= "row align-items-center fs-6">
-                    <p class="card-text col">harga</p>
-                    <p class="card-text col">tanggal</p>
+                    <p class="card-text col">Harga</p>
+                    <p class="card-text col">Tanggal</p>
                 </div>
                 <div class= "row align-items-center">
                     <p class="card-text col">{{ $kamar_hotels['harga']}}</p>
@@ -46,7 +50,7 @@
                 </select>
             </div>
             <div class="form-group mt-3">
-              <label for="exampleInputEmail1">Alamat Email</label>
+              <label for="exampleInputEmail1">Email</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan email Anda" />
             </div>
 

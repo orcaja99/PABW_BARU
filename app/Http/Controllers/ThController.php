@@ -32,7 +32,7 @@ class ThController extends Controller
     {
 
         $kamar_hotels = kamar_hotel::latest()->paginate(5);
-        return view('kamar_hotel.index_kamar_hotel',compact('kamar_hotels'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin/page/kamar_hotel/index_kamar_hotel',compact('kamar_hotels'))->with('i', (request()->input('page', 1) - 1) * 5);
         
     }
 
@@ -42,7 +42,7 @@ class ThController extends Controller
      */
     public function create(): View
     {
-        return view('kamar_hotel.tambah_kamar_hotel');
+        return view('admin.page.kamar_hotel.tambah_kamar_hotel');
 
     }
 
@@ -50,6 +50,7 @@ class ThController extends Controller
      * Store a newly created resource in storage.
      * 
      * @param  \Illuminate\Http\Request  $request
+     * @param  \App\kamar_hotel  $kamar_hotel
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request): RedirectResponse
@@ -64,7 +65,7 @@ class ThController extends Controller
       
         kamar_hotel::create($request->all());
        
-        return redirect()->route('kamar_hotels.index')
+        return redirect()->route('admin.page.kamar_hotel.index_kamar_hotel')
                         ->with('success','Product created successfully.');
     }
 
@@ -76,7 +77,7 @@ class ThController extends Controller
      */
     public function show(kamar_hotel $kamar_hotel): View
     {
-        return view('kamar_hotel/show_kamar_hotel',compact('kamar_hotel'));
+        return view('admin/page/kamar_hotel/show_kamar_hotel',compact('kamar_hotel'));
     }
 
     /**
@@ -87,7 +88,7 @@ class ThController extends Controller
      */
     public function edit(kamar_hotel $kamar_hotel): View
     {
-        return view('kamar_hotel/edit_kamar_hotel',compact('kamar_hotel'));
+        return view('admin/page/kamar_hotel/edit_kamar_hotel',compact('kamar_hotel'));
     }
 
     /**

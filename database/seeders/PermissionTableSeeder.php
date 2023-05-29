@@ -14,6 +14,7 @@ class PermissionTableSeeder extends Seeder
     public function run(): void
     {
         $permissions = [
+<<<<<<< HEAD
             // 'tiket_penerbangan-list',
             // 'tiket_penerbangan-create',
             // 'tiket_penerbangan-edit',
@@ -26,6 +27,12 @@ class PermissionTableSeeder extends Seeder
             // 'role-list',
             // 'role-edit',
             // 'role-delete'
+=======
+            'tiket_penerbangan-create',
+            'tiket_penerbangan-list',
+            'tiket_penerbangan-edit',
+            'tiket_penerbangan-delete'
+>>>>>>> 0006bc434e8f456b7a8f332adbc6e83dc7f52b5b
          ];
          
          foreach ($permissions as $permission) {

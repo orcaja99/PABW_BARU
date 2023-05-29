@@ -1,8 +1,6 @@
-@extends('layouts.app')
+@extends('admin.admin-home')
 
-
-@section('content')
-
+@section('admin-content')
 <section class="m-5">
 <link href=/css/role.css rel='stylesheet' type='text/css'>
 
@@ -10,9 +8,6 @@
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Edit Role</h2>
-        </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('roles.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -38,7 +33,7 @@
             {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
         <div class="form-group">
             <strong>Permission:</strong>
             <br/>
@@ -50,10 +45,14 @@
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary rounded-pill text-white">Submit</button>
     </div>
 </div>
 {!! Form::close() !!}
+
+        <div class="mt-5 d-flex justify-content-end">
+            <a class="btn btn-primary rounded-pill text-white" href="{{ route('roles.index') }}"> Back</a>
+        </div>
 </section>
 
 @endsection
