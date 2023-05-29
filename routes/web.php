@@ -13,6 +13,7 @@ use App\Http\Controllers\KursiController;
 use App\Http\Controllers\PesanKamarController;
 use App\Http\Controllers\PesanTiketController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PesananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,3 +116,4 @@ route::resource('tiket_penerbangans',KursiController::class);
 
 Route::get('/pesanan-kamar-hotel/{id}', [PesanKamarController::class,'detail'])-> name('pesanan.kamar');
 Route::get('/pesanan-tiket-penerbangan/{id}', [PesanTiketController::class,'detail'])-> name('pesanan.tiket');
+Route::post('/pesanan/create', [PesananController::class, 'createPesanan'])->name('pesanan.create');

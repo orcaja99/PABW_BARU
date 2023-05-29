@@ -77,7 +77,7 @@
             </div>
 
             <div class="flex-grow-1">
-                <main class="pt-5">
+                <main class="pt-5 pr-3 pl-3">
                     @yield('content')
                 </main>
             </div>

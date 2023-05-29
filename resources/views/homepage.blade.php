@@ -41,24 +41,37 @@
               <div class="card-body">
                 <div class="row align-items-center mb-3">
                   <div class="col">
-                    <h5 class="card-title">{{ $tiket_penerbangan->kode_pesawat }} - {{ $tiket_penerbangan->model_pesawat }}</h5>
+                    <h5 class="card-title fw-bold">{{ $tiket_penerbangan->kode_pesawat }} - {{ $tiket_penerbangan->model_pesawat }}</h5>
                   </div>
-                  <div class="col text-end fs-5">
+                  <div class="col text-start fw-bold fs-5">
                     {{ $tiket_penerbangan->maskapai }}
                   </div>
                 </div>
-                <div class="row align-items-center mt-3 fs-5">
-                  <p class="card-text col">{{ $tiket_penerbangan->asal }} - {{ $tiket_penerbangan->tujuan }}</p>
-                  <p class="card-text col">Kelas: {{ $tiket_penerbangan->kelas }}</p>
+                <div class="row align-items-center fs-5">
+                  <div class="col">
+                    <p class="card-text col">{{ $tiket_penerbangan->asal }} - {{ $tiket_penerbangan->tujuan }}</p>
+                  </div>
+                  <div class="col">
+                    <p class="card-text col">Kelas: {{ $tiket_penerbangan->kelas }}</p>
+                  </div>
                 </div>
-                <div class="row align-items-center">
-                  <p class="card-text col">Jam Berangkat: {{ $tiket_penerbangan->jam_berangkat }}</p>
-                  <p class="card-text col">Jam Tiba: {{ $tiket_penerbangan->jam_tiba }}</p>
+                <div class="row align-items-center mt-2">
+                  <div class="col">
+                    <p class="card-text col">Jam Berangkat: {{ $tiket_penerbangan->jam_berangkat }}</p>
+                  </div>
+                  <div class="col">
+                    <p class="card-text col">Jam Tiba: {{ $tiket_penerbangan->jam_tiba }}</p>
+                  </div>
                 </div>
-                <div class="row align-items-center">
-                  <p class="card-text col">Tanggal: {{ $tiket_penerbangan->tanggal }}</p>
-                  <p class="card-text col">Harga: Rp {{ $tiket_penerbangan->harga }}</p>
+                <div class="row align-items-center mt-2">
+                  <div class="col">
+                    <p class="card-text">Tanggal: {{ $tiket_penerbangan->tanggal }}</p>
+                  </div>
+                  <div class="col">
+                    <p class="card-text">Harga: Rp {{ $tiket_penerbangan->harga }}</p>
+                  </div>
                 </div>
+                
                 <div class="row">
                   <div class="col text-end">
                     <a href={{ route('pesanan.tiket', ['id' => $tiket_penerbangan->id]) }} class="btn btn-primary rounded-pill">Pesan Sekarang</a>
