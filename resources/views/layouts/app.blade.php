@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="/css/navbar.css">
 </head>
 <body>
-    <div id="app" class="d-flex flex-column min-vh-100">
+    <div id="app" class="d-flex flex-column">
             <div> 
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container">
@@ -82,7 +82,7 @@
                 </main>
             </div>
 
-            <footer class="text-white mt-auto p-1">
+            <footer class="text-white mt-auto p-1" style="position: fixed; bottom: 0; left: 0; right: 0;">
                 <div class="container mt-1 d-flex justify-content-center">
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('img/TicketIn.png') }}" alt="Logo" width="100" height="22" class="d-inline-block align-text-top  align-items-center">

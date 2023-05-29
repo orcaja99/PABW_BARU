@@ -7,15 +7,12 @@
             <div class="col-lg-12 d-flex justify-content-center">
                 <h2>Kamar Hotel</h2>
             </div>
-            <div class="col-lg-12 text-right mt-3">
+            <div class="col-lg-12 text-right mt-3 d-flex justify-content-end">
                 @can('kamar_hotel-create')
                 <a class="btn btn-success" href="{{ route('kamar_hotels.create') }}">Masukkan Kamar Hotel</a>
                 @endcan
             </div>
         </div>
-
-
-
 
         @if ($message = Session::get('success'))
             <div class="alert alert-success mt-3">
@@ -26,10 +23,11 @@
         <table class="table table-bordered mt-3">
             <tr>
                 <th>No</th>
-                <th>Nama hotel</th>
-                <th>hotel</th>
-                <th>tanggal</th>
-                <th>harga</th>
+                <th>Nama Kamar</th>
+                <th>Hotel</th>
+                <th>Fasilitas</th>
+                <th>Deskripsi</th>
+                <th>Harga</th>
                 <th width="280px">Action</th>
             </tr>
             @foreach ($kamar_hotels as $kamar_hotel)
@@ -37,7 +35,8 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $kamar_hotel->nama_kamar }}</td>
                 <td>{{ $kamar_hotel->hotel }}</td>
-                <td>{{ $kamar_hotel->tanggal }}</td>
+                <td>Fasilitas kamar disini</td>
+                <td>Deskripsi kamar disini</td>
                 <td>{{ $kamar_hotel->harga }}</td>
                 <td>
                     <form action="{{ route('kamar_hotels.destroy',$kamar_hotel->id) }}" method="POST">

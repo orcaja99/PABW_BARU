@@ -59,7 +59,13 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 
+Route::get('/hotel-dash',function () {
+    return view('mitra/hotel');
+});
 
+Route::get('/maskapai-dash',function () {
+    return view('mitra/maskapai');
+});
 
 
 
