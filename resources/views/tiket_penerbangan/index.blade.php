@@ -23,7 +23,13 @@
 <table class='table table-bordered'>
     <tr>
         <th>No</th>
-        <th>Nama Tiket</th>
+        <th>Kode</th>
+        <th>Model</th>
+        <th>Kelas</th>
+        <th>Asal</th>
+        <th>Tujuan</th>
+        <th>Waktu Berangkat</th>
+        <th>Waktu Sampai</th>
         <th>Maskapai</th>
         <th>Tanggal</th>
         <th>Harga</th>
@@ -32,7 +38,13 @@
     @foreach ($tiket_penerbangans as $tiket_penerbangan)
     <tr>
         <td>{{ ++$i }}</td>
-        <td>{{ $tiket_penerbangan->nama_tiket }}</td>
+        <td>{{ $tiket_penerbangan->kode_pesawat }}</td>
+        <td>{{ $tiket_penerbangan->model_pesawat }}</td>
+        <td>{{ $tiket_penerbangan->kelas }}</td>
+        <td>{{ $tiket_penerbangan->asal }}</td>
+        <td>{{ $tiket_penerbangan->tujuan }}</td>
+        <td>{{ $tiket_penerbangan->jam_berangkat }}</td>
+        <td>{{ $tiket_penerbangan->jam_tiba }}</td>
         <td>{{ $tiket_penerbangan->maskapai }}</td>
         <td>{{ $tiket_penerbangan->tanggal }}</td>
         <td>{{ $tiket_penerbangan->harga }}</td>

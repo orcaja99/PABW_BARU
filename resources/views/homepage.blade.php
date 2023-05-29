@@ -36,34 +36,37 @@
           <!-- ISI LIST PENERBANGAN -->
           <div class="container">
           <h3 class="lab mt-3">Penerbangan</h3>
-            @foreach ($tiket_penerbangans as $tiket_penerbangan)
+          @foreach ($tiket_penerbangans as $tiket_penerbangan)
             <div class="card mb-3 shadow">
               <div class="card-body">
                 <div class="row align-items-center mb-3">
                   <div class="col">
-                    <h5 class="card-title">{{ $tiket_penerbangan->nama_tiket }}</h5>
+                    <h5 class="card-title">{{ $tiket_penerbangan->kode_pesawat }} - {{ $tiket_penerbangan->model_pesawat }}</h5>
                   </div>
                   <div class="col text-end fs-5">
                     {{ $tiket_penerbangan->maskapai }}
                   </div>
                 </div>
-                <div class= "row align-items-center mt-3 fs-5">
-                  <p class="card-text col">tanggal</p>
-                  <p class="card-text col">harga</p>
+                <div class="row align-items-center mt-3 fs-5">
+                  <p class="card-text col">{{ $tiket_penerbangan->asal }} - {{ $tiket_penerbangan->tujuan }}</p>
+                  <p class="card-text col">Kelas: {{ $tiket_penerbangan->kelas }}</p>
                 </div>
-                <div class= "row align-items-center">
-                  <p class="card-text col">{{ $tiket_penerbangan->tanggal }}</p>
-                  <p class="card-text col">Rp {{ $tiket_penerbangan->harga }}</p>
+                <div class="row align-items-center">
+                  <p class="card-text col">Jam Berangkat: {{ $tiket_penerbangan->jam_berangkat }}</p>
+                  <p class="card-text col">Jam Tiba: {{ $tiket_penerbangan->jam_tiba }}</p>
                 </div>
-
-                <div class= "row">
-                  <div class= "col text-end">
-                    <a href="#" class="btn btn-primary rounded-pill">Pesan Sekarang</a>
+                <div class="row align-items-center">
+                  <p class="card-text col">Tanggal: {{ $tiket_penerbangan->tanggal }}</p>
+                  <p class="card-text col">Harga: Rp {{ $tiket_penerbangan->harga }}</p>
+                </div>
+                <div class="row">
+                  <div class="col text-end">
+                    <a href={{ route('pesanan.tiket', ['id' => $tiket_penerbangan->id]) }} class="btn btn-primary rounded-pill">Pesan Sekarang</a>
                   </div>
                 </div>
               </div> 
             </div>
-            @endforeach
+          @endforeach
           </div>
         </form>                   
       </div>

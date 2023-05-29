@@ -15,6 +15,6 @@ class tiket_penerbangan extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'nama_tiket', 'maskapai', 'tanggal', 'harga'
+        'id', 'model_pesawat', 'kelas', 'kode_pesawat', 'jam_berangkat', 'jam_tiba', 'asal', 'tujuan', 'maskapai', 'tanggal', 'harga'
     ];
 }

@@ -57,7 +57,13 @@ class KursiController extends Controller
     public function store(Request $request): RedirectResponse
     {        
         $request->validate([
-            'nama_tiket' => 'required',
+            'kode_pesawat' => 'required',
+            'model_pesawat' => 'required',
+            'kelas' => 'required',
+            'asal' => 'required',
+            'tujuan' => 'required',
+            'jam_berangkat' => 'required',
+            'jam_tiba' => 'required',
             'maskapai' => 'required',
             'tanggal' => 'required',
             'harga' => 'required',

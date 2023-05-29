@@ -10,13 +10,13 @@ class PesanTiketController extends Controller
 {
     public function index()
     {
-        $tiket_penerbangan = tiket_penerbangan::all();
-        return view(('pesan_tiket'),['kamar_hotels'=>$tiket_penerbangan]);
+        $tiket_penerbangans = tiket_penerbangan::all();
+        return view(('pesan_penerbangan'),['tiket_penerbangans'=>$tiket_penerbangans]);
     }
 
     public function detail($id)
     {
-        $tiket_penerbangan =  tiket_penerbangan::find($id);
-        return view(('pesan_tiket'),['kamar_hotels'=>$tiket_penerbangan]);
+        $tiket_penerbangans =  tiket_penerbangan::find($id);
+        return view(('pesan_penerbangan'),['tiket_penerbangans'=>$tiket_penerbangans]);
     }
 }

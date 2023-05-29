@@ -54,6 +54,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
+            'name' => env('APP_NAME', 'Laravel'),
             'channels' => ['single'],
             'ignore_exceptions' => false,
         ],

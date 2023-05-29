@@ -27,9 +27,40 @@
     <div class='row'>
         <div class='col-xs-12 col-sm-12 col-md-12'>
             <div class='form-group'>
-                <strong>Nama Tiket:</strong>
-                <input type='text' name='nama_tiket' class='form-control' placeholder='nama tiket'>
+                <strong>Kode:</strong>
+                <input type='text' name='kode_pesawat' class='form-control' placeholder='nama tiket'>
             </div>
+
+            <div class='form-group'>
+                <strong>Model:</strong>
+                <input type='text' name='model_pesawat' class='form-control' placeholder='model pesawat'>
+            </div>
+
+            <div class='form-group'>
+                <strong>Kelas:</strong>
+                <input type='text' name='kelas' class='form-control' placeholder='kelas'>
+            </div>
+
+            <div class='form-group'>
+                <strong>Asal:</strong>
+                <input type='text' name='asal' class='form-control' placeholder='asal'>
+            </div>
+
+            <div class='form-group'>
+                <strong>Tujuan:</strong>
+                <input type='text' name='tujuan' class='form-control' placeholder='tujuan'>
+            </div>
+
+            <div class="form-group">
+                <strong>Waktu Keberangkatan:</strong>
+                <input type='time' name='jam_berangkat' class='form-control' placeholder='waktu'>
+            </div>
+
+            <div class='form-group'>
+                <strong>Waktu Kedatangan:</strong>
+                <input type='time' name='jam_tiba' class='form-control' placeholder='waktu'>
+            </div>
+
 
             <div class='form-group'>
                 <strong>Maskapai:</strong>

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Log;
     
 class UserController extends Controller
 {
@@ -71,6 +72,9 @@ class UserController extends Controller
      */
     public function show($id): View
     {
+
+        Log::info('Showing the user profile for user: {id}', ['id' => $id]);
+
         $user = User::find($id);
         return view('users.show',compact('user'));
     }
