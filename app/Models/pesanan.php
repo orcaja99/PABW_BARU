@@ -23,9 +23,14 @@ class pesanan extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    public function pesanan_detail()
+    
+    public function kamar()
     {
-        return $this->hasMany(pesanan_detail::class);
+        return $this->belongsTo(kamar_hotel::class);
+    }
+    
+    public function tiket()
+    {
+        return $this->belongsTo(tiket_penerbangan::class);
     }
 }

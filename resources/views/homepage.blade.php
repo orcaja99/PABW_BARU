@@ -71,6 +71,12 @@
                     <p class="card-text">Harga: Rp {{ $tiket_penerbangan->harga }}</p>
                   </div>
                 </div>
+
+                <div class="row mt-2">
+                  <div class="col">
+                    <p class="card-text">status : {{ $tiket_penerbangan->status }}</p>
+                  </div>
+                </div>
                 
                 <div class="row">
                   <div class="col text-end">
@@ -94,19 +100,19 @@
               <div class="card-body">
                 <div class="row align-items-center mb-3">
                   <div class="col">
-                    <h5 class="card-title">{{ $kamar_hotel->nama_kamar }}</h5>
+                    <h5 class="card-title fw-bold fs-4">{{ $kamar_hotel->nama_kamar }}</h5>
                   </div>
-                  <div class="col text-end fs-5">
+                  <div class="col text-start fs-5 fw-bold">
                     {{ $kamar_hotel->hotel }}
                   </div>
                 </div>
-                <p class="text-truncate">Deskripsi kamar disini. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sollicitudin tellus, sit amet dapibus risus. Vivamus tempus mattis erat, sit amet venenatis ligula pulvinar et. Nullam tempus purus ut sapien sodales tempus. Vestibulum risus orci, mattis eu turpis vitae, sollicitudin dapibus augue. Mauris feugiat diam ut molestie gravida. Nullam vulputate, sapien eget euismod mollis, tellus tellus ultricies orci, in laoreet sapien metus sit amet nisl. Maecenas laoreet, nibh quis rhoncus malesuada, tortor magna vestibulum elit, ut porta enim purus vitae velit. Integer laoreet orci vel lacinia gravida. Nullam ac elit molestie, scelerisque turpis non, luctus lacus. Curabitur eleifend varius luctus. Morbi vehicula quam sit amet leo sagittis porttitor. Nunc quis ligula ac lectus semper rutrum.</p>
+                <p class="text-truncate">Fasilitas : {{ $kamar_hotel->fasilitas }} </p>
                 <div class= "row align-items-center mt-3 fs-5">
-                  <p class="card-text col">Fasilitas</p>
+                  <p class="card-text col">lokasi</p>
                   <p class="card-text col">Harga</p>
                 </div>
                 <div class= "row align-items-center">
-                  <p class="card-text col">Wi-Fi, AC, Televisi</p>
+                  <p class="card-text col">{{ $kamar_hotel->lokasi }}</p>
                   <p class="card-text col">Rp {{ $kamar_hotel->harga }}</p>
                 </div>
 

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('maskapai');
             $table->date('tanggal');
             $table->integer('harga');
+            $table->string('status')->default('tersedia');
             $table->timestamps();
         });
     }

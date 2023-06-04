@@ -15,6 +15,11 @@ class tiket_penerbangan extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'model_pesawat', 'kelas', 'kode_pesawat', 'jam_berangkat', 'jam_tiba', 'asal', 'tujuan', 'maskapai', 'tanggal', 'harga'
+        'id', 'model_pesawat', 'kelas', 'kode_pesawat', 'jam_berangkat', 'jam_tiba', 'asal', 'tujuan', 'maskapai', 'tanggal','status', 'harga'
     ];
+
+    public function pesanan()
+    {
+        return $this->hasMany(pesanan::class);
+    }
 }

@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('pesanan', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('kamar_id')->nullable();
+            $table->unsignedBigInteger('tiket_id')->nullable();
             $table->string('nama_pemesan');
-            $table->string('nama_barang');
             $table->integer('jumlah_barang');
-            $table->integer('harga_barang');
-            $table->integer('total_harga');
-            $table->string('no_hp');
-            $table->string('status');
+            $table->integer('no_hp');
+            $table->enum('status', ['pending', 'confirmed', 'cancelled'])->default('pending');
             $table->timestamps();
+
+
         });
     }
 

@@ -26,7 +26,7 @@
                 <th>Nama Kamar</th>
                 <th>Hotel</th>
                 <th>Fasilitas</th>
-                <th>Deskripsi</th>
+                <th>lokasi</th>
                 <th>Harga</th>
                 <th width="280px">Action</th>
             </tr>
@@ -35,8 +35,8 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $kamar_hotel->nama_kamar }}</td>
                 <td>{{ $kamar_hotel->hotel }}</td>
-                <td>Fasilitas kamar disini</td>
-                <td>Deskripsi kamar disini</td>
+                <td>{{ $kamar_hotel->fasilitas }}</td>
+                <td>{{ $kamar_hotel->lokasi }}</td>
                 <td>{{ $kamar_hotel->harga }}</td>
                 <td>
                     <form action="{{ route('kamar_hotels.destroy',$kamar_hotel->id) }}" method="POST">

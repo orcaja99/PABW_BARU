@@ -15,6 +15,12 @@ class kamar_hotel extends Model
      */
 
     protected $fillable = [
-        'id','nama_kamar', 'hotel','nama_hotel','harga','tanggal'
+        'id','nama_kamar', 'hotel','nama_hotel','harga','tanggal','fasilitas','lokasi','status'
     ];
+
+
+    public function pesanan()
+    {
+        return $this->hasMany(pesanan::class);
+    }
 }

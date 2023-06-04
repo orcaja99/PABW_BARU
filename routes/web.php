@@ -57,9 +57,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
     Route::resource('tiket_penerbangans', KursiController::class)->middleware('auth');
-    Route::resource('kamar_hotels', ThController::class)->middleware('auth');
+    //Route::resource('kamar_hotels', ThController::class)->middleware('auth');
 });
-
+Route::resource('kamar_hotels', ThController::class);
 
 Route::get('/hotel-dash',function () {
     return view('mitra/hotel');
@@ -112,8 +112,13 @@ Route::get('/homepage',function () {
 Route::resource('homepage',homepageController::class);
 //Route::get('/homepage', homepageController::class);
 // route::resource('kamar_hotels',ThController::class);
-route::resource('tiket_penerbangans',KursiController::class);
+
 
 Route::get('/pesanan-kamar-hotel/{id}', [PesanKamarController::class,'detail'])-> name('pesanan.kamar');
 Route::get('/pesanan-tiket-penerbangan/{id}', [PesanTiketController::class,'detail'])-> name('pesanan.tiket');
 Route::post('/pesanan/create', [PesananController::class, 'createPesanan'])->name('pesanan.create');
+
+//test pemesanan
+Route::post('/bookings', [PesananController::class, 'store']);
+Route::post('/bookings/cancel', [PesananController::class, 'cancelpesanan']);
+Route::post('/bookings', [PesananController::class, 'store'])->name('bookings.store');

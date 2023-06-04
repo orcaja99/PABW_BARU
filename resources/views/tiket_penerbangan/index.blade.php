@@ -33,6 +33,7 @@
         <th>Maskapai</th>
         <th>Tanggal</th>
         <th>Harga</th>
+        <th>status</th>
         <th width='280px'>Action</th>
     </tr>
     @foreach ($tiket_penerbangans as $tiket_penerbangan)
@@ -48,6 +49,7 @@
         <td>{{ $tiket_penerbangan->maskapai }}</td>
         <td>{{ $tiket_penerbangan->tanggal }}</td>
         <td>{{ $tiket_penerbangan->harga }}</td>
+        <td>{{ $tiket_penerbangan->status }}</td>
         <td>
             <form action="{{ route('tiket_penerbangans.destroy',$tiket_penerbangan->id) }}" method='POST'>
                 <a class='btn btn-info' href="{{ route('tiket_penerbangans.show',$tiket_penerbangan->id) }}">Show</a>

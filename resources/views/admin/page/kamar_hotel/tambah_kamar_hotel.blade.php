@@ -52,6 +52,18 @@
                 <input type="number"  name="harga" class="form-control" style="height:150px" name="detail" placeholder="harga">
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Fasilitas:</strong>
+                <input type="text"  name="fasilitas" class="form-control" style="height:150px" name="detail" placeholder="fasilitas">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Lokasi:</strong>
+                <input type="text"  name="lokasi" class="form-control" style="height:150px" name="detail" placeholder="lokasi">
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-2">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>

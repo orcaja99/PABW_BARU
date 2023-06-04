@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('fasilitas');
             $table->date('tanggal');
             $table->integer('harga');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

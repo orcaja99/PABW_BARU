@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\kamar_hotel;
 use Illuminate\Http\Request;
+
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ThController extends Controller
 {
@@ -21,6 +23,7 @@ class ThController extends Controller
         $this->middleware('permission:kamar_hotel-create', ['only' => ['create','store']]);
         $this->middleware('permission:kamar_hotel-edit', ['only' => ['edit','update']]);
         $this->middleware('permission:kamar_hotel-delete', ['only' => ['destroy']]);
+        
     }
 
     /**
@@ -32,6 +35,10 @@ class ThController extends Controller
     {
 
         $kamar_hotels = kamar_hotel::latest()->paginate(5);
+
+        if (request()->expectsJson()) {
+            return response()->json($kamar_hotels);
+        }
         return view('admin/page/kamar_hotel/index_kamar_hotel',compact('kamar_hotels'))->with('i', (request()->input('page', 1) - 1) * 5);
         
     }
@@ -61,6 +68,8 @@ class ThController extends Controller
             'hotel' => 'required',
             'tanggal' => 'required',
             'harga' => 'required',
+            'fasilitas' => 'required',
+            'lokasi' => 'required',
         ]);
       
         kamar_hotel::create($request->all());
@@ -75,9 +84,14 @@ class ThController extends Controller
      * @param  \App\kamar_hotel  $kamar_hotel
      * @return \Illuminate\Http\Response
      */
-    public function show(kamar_hotel $kamar_hotel): View
+    public function show(kamar_hotel $kamar_hotel)
     {
-        return view('admin/page/kamar_hotel/show_kamar_hotel',compact('kamar_hotel'));
+        if (request()->expectsJson()) {
+            return response()->json($kamar_hotel);
+        }
+    
+        return view('admin.page.kamar_hotel.show_kamar_hotel', compact('kamar_hotel'))->with('jsonData', $kamar_hotel->toJson());
+    
     }
 
     /**
@@ -105,6 +119,8 @@ class ThController extends Controller
             'hotel' => 'required',
             'tanggal' => 'required',
             'harga' => 'required',
+            'fasilitas' => 'required',
+            'lokasi' => 'required',
         ]);
   
         $kamar_hotel->update($request->all());

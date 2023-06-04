@@ -53,6 +53,13 @@
                     <input type="text" name="fasilitas" value="" class="form-control" placeholder="Fasilitas">
                 </div>
             </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                <div class="form-group">
+                    <strong>lokasi:</strong>
+                    <input type="text" name="lokasi" value="" class="form-control" placeholder="lokasi">
+                </div>
+            </div>
                 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">
               <button type="submit" class="btn btn-primary rounded-pill text-white">Submit</button>
