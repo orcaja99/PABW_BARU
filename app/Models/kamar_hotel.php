@@ -15,6 +15,6 @@ class kamar_hotel extends Model
      */
 
     protected $fillable = [
-        'id','nama_kamar', 'hotel','nama_hotel','harga','tanggal'
+        'id','nama_kamar', 'hotel', 'lokasi', 'fasilitas', 'tanggal', 'harga'
     ];
 }

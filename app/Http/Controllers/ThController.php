@@ -59,6 +59,8 @@ class ThController extends Controller
         $request->validate([
             'nama_kamar' => 'required',
             'hotel' => 'required',
+            'lokasi' => 'required',
+            'fasilitas' => 'required',
             'tanggal' => 'required',
             'harga' => 'required',
         ]);
@@ -103,6 +105,8 @@ class ThController extends Controller
         $request->validate([
             'nama_kamar' => 'required',
             'hotel' => 'required',
+            'lokasi' => 'required',
+            'fasilitas' => 'required',
             'tanggal' => 'required',
             'harga' => 'required',
         ]);

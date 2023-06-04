@@ -42,6 +42,27 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
                 <div class="form-group">
+                    <strong>Lokasi:</strong>
+                    <input type="text" name="lokasi" value="{{ $kamar_hotel->lokasi }}" class="form-control" placeholder="Lokasi">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
+                <div class="form-group">
+                    <strong>Fasilitas:</strong>
+                    <textarea name="fasilitas" class="form-control"  rows="3" style="height: 100px; resize:none;" name="detail" placeholder="hotel"></textarea>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                <div class="form-group">
+                    <strong>Tanggal:</strong>
+                    <input type="number" name="tanggal" value="{{ $kamar_hotel->tanggal }}" class="form-control" placeholder="Tanggal">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                <div class="form-group">
                     <strong>Harga:</strong>
                     <input type="number" name="harga" value="{{ $kamar_hotel->harga }}" class="form-control" placeholder="Harga">
                 </div>
