@@ -8,28 +8,27 @@
                 <h2>{{ $kamar_hotel->nama_kamar }}</h2>
             </div>
             <div class="pull-left mt-3">
+                <p>{{ $kamar_hotel->lokasi }}</p>
             </div>
             
         </div>
     </div>
 
-    <div class="my-3 p-3 bg-body rounded shadow-sm">
-        <h6 class="border-bottom pb-2 mb-0 fs-5">Details</h6>
+    <div class="card my-3">
+        <div class="card-body p-3">
+            <h6 class="border-bottom pb-2 mb-0 fs-5">Details</h6>
     
-        <div class="d-flex text-body-secondary pt-3">
-            <strong class="d-block text-gray-dark fs-6">Hotel: </strong>
-            <p class="pb-3 mb-0 small lh-sm border-bottom ms-3 fs-6">
-            {{ $kamar_hotel->hotel }}
-            </p>
-        </div>
+            <div class="d-flex text-body-secondary pt-3">
+                <strong class="d-block text-gray-dark fs-6">Hotel:</strong>
+                <p class="pb-3 mb-0 small lh-sm border-bottom ms-3 fs-6">{{ $kamar_hotel->hotel }}</p>
+            </div>
     
-        <div class="d-flex text-body-secondary pt-3">
-            <strong class="d-block text-gray-dark fs-6">Harga: </strong>
-            <p class="pb-3 mb-0 small lh-sm border-bottom ms-3 fs-6">
-            {{ $kamar_hotel->tanggal }}
-            </p>
-        </div>
+            <div class="d-flex text-body-secondary pt-3">
+                <strong class="d-block text-gray-dark fs-6">Harga:</strong>
+                <p class="pb-3 mb-0 small lh-sm border-bottom ms-3 fs-6">{{ $kamar_hotel->tanggal }}</p>
+            </div>
     
+<<<<<<< HEAD
         <div class="d-flex text-body-secondary pt-3">
             <strong class="d-block text-gray-dark fs-6">Hotel: </strong>
             <p class="pb-3 mb-0 small lh-sm border-bottom ms-3 fs-6">
@@ -42,8 +41,15 @@
             <p class="pb-3 mb-0 small lh-sm border-bottom ms-3 fs-6">
             {{ $kamar_hotel->lokasi }}
             </p>
+=======
+            <div class="d-flex text-body-secondary pt-3">
+                <strong class="d-block text-gray-dark fs-6">Fasilitas:</strong>
+                <p class="pb-3 mb-0 small lh-sm border-bottom ms-3 fs-6">{{ $kamar_hotel->fasilitas }}</p>
+            </div>
+>>>>>>> 04ff935acbe8e16c41bb2efed1ffde88a47f8d9b
         </div>
     </div>
+    
 
 
 
