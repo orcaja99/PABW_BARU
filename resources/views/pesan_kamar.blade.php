@@ -1,16 +1,9 @@
 @extends('layouts.app')
-<<<<<<< HEAD
 
 @section('content')
 <link rel="stylesheet" type="text/css" href="/css/pesan.css">
 <section>
   <h1 class= "p-5 text-center fs-3">Detail Pemesanan </h1>
-=======
-@section('content')
-<section>
-    <link rel="stylesheet" type="text/css" href="/css/pesan.css">
-    <h1 class= "p-5 text-center fs-3">Detail Pemesanan </h1>
->>>>>>> origin/fe
     <div class="container mt-4">
       <div class="row">
         <div class="col-md-4">

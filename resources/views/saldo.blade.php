@@ -78,18 +78,6 @@
         </div>
       </div>
 
-<<<<<<< HEAD
         <!-- End Example Code -->
 </body>
-=======
-    </div>
-
-<footer class="text-white py-2">
-    <div class="container mt-1 d-flex justify-content-center">
-        <a class="navbar-brand" href="#">
-            <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">&#169; 2023, Kelompok 5 PABW B
-        </a>
-    </div>
-</footer>
->>>>>>> origin/fe
 @endsection

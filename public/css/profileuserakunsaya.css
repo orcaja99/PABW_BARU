@@ -97,12 +97,4 @@ body {
     font-size: 15px;
 }
 
-<<<<<<< HEAD
 input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none;}
-=======
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-*/
->>>>>>> origin/fe
