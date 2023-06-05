@@ -103,6 +103,10 @@ Route::get('/homepage',function () {
     return view('homepage');
 });
 
+Route::get('/all_FE',function () {
+    return view('all_FE');
+});
+
 // Route::get('/tiket_penerbangans',function () {
     // return view('tiket_penerbangans');
 // });

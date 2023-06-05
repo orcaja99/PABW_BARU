@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 @extends('layouts.app')
+=======
+@extends ('layouts.app')
+@section('content')
+<link rel="stylesheet" type="text/css" href="/css/pesan.css">
+>>>>>>> origin/fe
 
 @section('content')
 	<div class="container mt-5">
@@ -53,4 +59,18 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 @endsection
+=======
+
+
+<footer class="text-white py-2">
+    <div class="container mt-1 d-flex justify-content-center">
+        <a class="navbar-brand" href="#">
+            <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">
+            2023
+        </a>
+    </div>
+</footer>
+@endsection
+>>>>>>> origin/fe
