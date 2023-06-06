@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RoleController;
@@ -14,6 +13,7 @@ use App\Http\Controllers\PesanKamarController;
 use App\Http\Controllers\PesanTiketController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +36,7 @@ Auth::routes();
 
 // Admin Page
 
-Route::get('/admin', [AdminController::class, 'adminHome'])->name('admin_dashboard');
+Route::get('/admin', [AdminController::class, 'adminHome'])->middleware(['auth', 'role:Admin'])->name('admin.home');
 Route::get('admin/page', [PageController::class, 'home'])->name('admin.page.home');
 
 Route::get('admin/page/user/index', [PageController::class, 'user'])->name('admin.page.user.index');
@@ -54,12 +54,16 @@ Route::get('admin/page/roles/index', [RoleController::class, 'index'])->name('ad
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
-    Route::resource('users', UserController::class);
+    Route::resource('users', UserController::class)->middleware(['auth', 'role:Admin']);
     Route::resource('products', ProductController::class);
-    Route::resource('tiket_penerbangans', KursiController::class)->middleware('auth');
-    //Route::resource('kamar_hotels', ThController::class)->middleware('auth');
+    Route::resource('tiket_penerbangans', KursiController::class)->middleware(['auth', 'role:Admin']);
+    Route::resource('kamar_hotels', ThController::class)->middleware(['auth', 'role:Admin']);
+
 });
-Route::resource('kamar_hotels', ThController::class);
+
+
+
+// Route::resource('kamar_hotels', ThController::class);
 
 Route::get('/hotel-dash',function () {
     return view('mitra/hotel');
