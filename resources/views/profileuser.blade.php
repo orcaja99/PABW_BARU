@@ -4,35 +4,24 @@
 <link href=/css/profileuserakunsaya.css rel='stylesheet' type='text/css'>
 <div class="container">
 
-      <!-- Breadcrumb -->
-      <!-- <nav aria-label="breadcrumb" class="main-breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
-        </ol>
-      </nav> -->
-      <!-- /Breadcrumb -->
-
       <div class="row gutters-sm">
         <div class="col-md-4 d-none d-md-block">
           <div class="card">
             <div class="card-body">
               <nav class="nav flex-column nav-pills nav-gap-y-1">
-                <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
+              <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
+                <a href="profileuser">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-2">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>{{ Auth::user()->name }}
                 </a>
                 <a href="#TicketInPay" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                  <a href="saldo">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card mr-2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>TicketInPay
                 </a>
                 <a href="#pesanan" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                  <a href="myorder">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield mr-2">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Pesanan
-                </a>
-                <a href="#riwayatpemesanan" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell mr-2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>Riwayat Pemesanan
                 </a>
                 
               </nav>
@@ -88,197 +77,14 @@
                   <label for="exampleFormControlInput1" class="form-label">Nomor Telepon</label>
                   <input type="number" class="form-control">
                   </div>
-                  <!-- <div class="form-group small text-muted">
-                    All of the fields on this page are optional and can be deleted at any time, and by filling them out, you're giving us consent to share this data wherever your user profile appears.
-                  </div> -->
                   <button type="button" class="btn btn-primary">Update Profile</button>
                   <button type="reset" class="btn btn-light">Reset Changes</button>
-                </form>
-              </div>
-              <div class="tab-pane" id="account">
-                <h6>ACCOUNT SETTINGS</h6>
-                <hr>
-                <form>
-                  <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="kennethvaldez">
-                    <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username becomes available for anyone else to claim.</small>
-                  </div>
-                  <hr>
-                  <div class="form-group">
-                    <label class="d-block text-danger">Delete Account</label>
-                    <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please be certain.</p>
-                  </div>
-                  <button class="btn btn-danger" type="button">Delete Account</button>
-                </form>
-              </div>
-              <div class="tab-pane" id="security">
-                <h6>SECURITY SETTINGS</h6>
-                <hr>
-                <form>
-                  <div class="form-group">
-                    <label class="d-block">Change Password</label>
-                    <input type="text" class="form-control" placeholder="Enter your old password">
-                    <input type="text" class="form-control mt-1" placeholder="New password">
-                    <input type="text" class="form-control mt-1" placeholder="Confirm new password">
-                  </div>
-                </form>
-                <hr>
-                <form>
-                  <div class="form-group">
-                    <label class="d-block">Two Factor Authentication</label>
-                    <button class="btn btn-info" type="button">Enable two-factor authentication</button>
-                    <p class="small text-muted mt-2">Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in.</p>
-                  </div>
-                </form>
-                <hr>
-                <form>
-                  <div class="form-group mb-0">
-                    <label class="d-block">Sessions</label>
-                    <p class="font-size-sm text-secondary">This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.</p>
-                    <ul class="list-group list-group-sm">
-                      <li class="list-group-item has-icon">
-                        <div>
-                          <h6 class="mb-0">San Francisco City 190.24.335.55</h6>
-                          <small class="text-muted">Your current session seen in United States</small>
-                        </div>
-                        <button class="btn btn-light btn-sm ml-auto" type="button">More info</button>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
-              </div>
-              <div class="tab-pane" id="notification">
-                <h6>NOTIFICATION SETTINGS</h6>
-                <hr>
-                <form>
-                  <div class="form-group">
-                    <label class="d-block mb-0">Security Alerts</label>
-                    <div class="small text-muted mb-3">Receive security alert notifications via email</div>
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
-                      <label class="custom-control-label" for="customCheck1">Email each time a vulnerability is found</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck2" checked="">
-                      <label class="custom-control-label" for="customCheck2">Email a digest summary of vulnerability</label>
-                    </div>
-                  </div>
-                  <div class="form-group mb-0">
-                    <label class="d-block">SMS Notifications</label>
-                    <ul class="list-group list-group-sm">
-                      <li class="list-group-item has-icon">
-                        Comments
-                        <div class="custom-control custom-control-nolabel custom-switch ml-auto">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
-                          <label class="custom-control-label" for="customSwitch1"></label>
-                        </div>
-                      </li>
-                      <li class="list-group-item has-icon">
-                        Updates From People
-                        <div class="custom-control custom-control-nolabel custom-switch ml-auto">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                          <label class="custom-control-label" for="customSwitch2"></label>
-                        </div>
-                      </li>
-                      <li class="list-group-item has-icon">
-                        Reminders
-                        <div class="custom-control custom-control-nolabel custom-switch ml-auto">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch3" checked="">
-                          <label class="custom-control-label" for="customSwitch3"></label>
-                        </div>
-                      </li>
-                      <li class="list-group-item has-icon">
-                        Events
-                        <div class="custom-control custom-control-nolabel custom-switch ml-auto">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch4" checked="">
-                          <label class="custom-control-label" for="customSwitch4"></label>
-                        </div>
-                      </li>
-                      <li class="list-group-item has-icon">
-                        Pages You Follow
-                        <div class="custom-control custom-control-nolabel custom-switch ml-auto">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch5">
-                          <label class="custom-control-label" for="customSwitch5"></label>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
-              </div>
-              <div class="tab-pane" id="billing">
-                <h6>BILLING SETTINGS</h6>
-                <hr>
-                <form>
-                  <div class="form-group">
-                    <label class="d-block mb-0">Payment Method</label>
-                    <div class="small text-muted mb-3">You have not added a payment method</div>
-                    <button class="btn btn-info" type="button">Add Payment Method</button>
-                  </div>
-                  <div class="form-group mb-0">
-                    <label class="d-block">Payment History</label>
-                    <div class="border border-gray-500 bg-gray-200 p-3 text-center font-size-sm">You have not made any payment.</div>
-                  </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-
-
-<!-- <link href=/css/profileuserakunsaya.css rel='stylesheet' type='text/css'>
-<div class="row">
-  <div class="container text-center">
-    <div class="row justify-content-evenly">
-      <div class="col-4">
-        <div class="p-5">
-          <div class="card" style="width: 20dp; ">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{ Auth::user()->name }}</li>
-              <li class="list-group-item">TicketInPay</li>
-              <li class="list-group-item">Pesanan</li>
-              <li class="list-group-item">Riwayat Pemesanan</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="p-5">
-          <div class="card" style="width: 20dp;">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Data Pribadi</li>
-              <label for="exampleFormControlInput1" class="form-label">Nama Lengkap</label>
-              <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->name }}"></li>
-              <label for="exampleFormControlInput1" class="form-label">Email</label>
-              <li class="list-group-item"><input class="form-control" type="text" placeholder="{{ Auth::user()->email }}"></li>
-              <label for="exampleFormControlInput1" class="form-label">Jenis Kelamin</label>
-              <select class="form-control" id="dropdown" name="dropdown">
-                <option value="option1">Laki-laki</option>
-                <option value="option2">Perempuan</option>
-              </select>
-              <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
-              <input type="date" name="tanggal" class="form-control" style="height:50px" placeholder="tanggal">
-              <label for="exampleFormControlInput1" class="form-label">Nomor Telepon</label>
-              <input type="number" class="form-control">
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-<<<<<<< HEAD
-        <!-- End Example Code -->
 </body>
 @endsection
-=======
-<footer class="text-white py-2 mt-auto">
-    <div class="container mt-1 d-flex justify-content-center">
-        <a class="d-flex flex-column">
-            <img src="img/TicketIn.png" alt="Logo" width="100" height="22" class="d-inline-block align-text-top">&#169; 2023, Kelompok 5 PABW B
-        </a>
-    </div>
-</footer>
->>>>>>> origin/fe

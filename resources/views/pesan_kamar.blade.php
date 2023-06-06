@@ -33,7 +33,7 @@
           </div>
 
         <div class="col-md-8">
-          <form action="{{ route('bookings.store') }}" method="POST">
+          <form action="{{ route('store') }}" method="POST">
             @csrf
             <div class="form-group ">
               <label for="iduser">id user</label>
@@ -66,9 +66,4 @@
       </div>
     </div>
 </section>
-<<<<<<< HEAD
 @endsection
-=======
-
-@endsection
->>>>>>> origin/fe

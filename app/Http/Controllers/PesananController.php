@@ -21,50 +21,49 @@ class PesananController extends Controller
             'jumlah_barang' => 'required|integer',
             'no_hp' => 'required|integer',
         ]);
-
+    
         $user = User::findOrFail($request->user_id);
         $kamar_hotels =  kamar_hotel::findOrFail($request->kamar_id);
-
-
-        // Check Kamar$kamar_hotels availability
+    
+        // Check Kamar availability
         if (!$kamar_hotels->status) {
             return response()->json(['message' => 'Kamar is not available.'], 400);
         }
-
-        // Calculate the booking price based on the Kamar$kamar_hotels's price and duration
-        $hargapesanan = $kamar_hotels->harga;
+    
+        // Calculate the booking price based on the Kamar's price and quantity
+        $hargapesanan = $kamar_hotels->harga * $request->jumlah_barang;
+    
         // Check user's e-wallet balance
-        
         if ($user->saldo < $hargapesanan) {
             return response()->json(['message' => 'Insufficient e-wallet balance.'], 400);
         }
-
+    
         // Create the booking
-        $pesanan = new pesanan();
+        $pesanan = new Pesanan();
         $pesanan->user_id = $user->id;
         $pesanan->kamar_id = $kamar_hotels->id;
         $pesanan->jumlah_barang = $request->jumlah_barang;
         $pesanan->harga_barang = $kamar_hotels->harga;
         $pesanan->status = 'confirmed'; // Assuming bookings are confirmed instantly
         $pesanan->save();
-
-        // Update Kamar$kamar_hotels availability
+    
+        // Update Kamar availability
         $kamar_hotels->status = false;
         $kamar_hotels->save();
-
+    
         // Transfer funds from user's e-wallet to mitra's e-wallet
         // Assuming mitra's user ID is 1, update accordingly
         $mitra = User::findOrFail(1);
         $mitra->saldo += $hargapesanan;
         $mitra->save();
-
+    
         // Update user's e-wallet balance
         $user->saldo -= $hargapesanan;
         $user->save();
-
-        return response()->json(['message' => 'Kamar$kamar_hotels booked successfully.'])->isRedirect('homepage');
-        
+    
+        return redirect()->route('homepage')->with('success', 'Kamar booked successfully.');
     }
+    
 
     public function cancelBooking(Request $request)
     {

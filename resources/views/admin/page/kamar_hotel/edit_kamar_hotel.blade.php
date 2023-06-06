@@ -57,7 +57,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
                 <div class="form-group">
                     <strong>Tanggal:</strong>
-                    <input type="number" name="tanggal" value="{{ $kamar_hotel->tanggal }}" class="form-control" placeholder="Tanggal">
+                    <input type="date" name="tanggal" value="{{ $kamar_hotel->tanggal }}" class="form-control" placeholder="Tanggal">
                 </div>
             </div>
 
@@ -65,20 +65,6 @@
                 <div class="form-group">
                     <strong>Harga:</strong>
                     <input type="number" name="harga" value="{{ $kamar_hotel->harga }}" class="form-control" placeholder="Harga">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
-                <div class="form-group">
-                    <strong>Fasilitas:</strong>
-                    <input type="text" name="fasilitas" value="" class="form-control" placeholder="Fasilitas">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
-                <div class="form-group">
-                    <strong>lokasi:</strong>
-                    <input type="text" name="lokasi" value="" class="form-control" placeholder="lokasi">
                 </div>
             </div>
                 

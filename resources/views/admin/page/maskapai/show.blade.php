@@ -1,12 +1,13 @@
-@extends('layouts.app')
-@section('content')
-<div class="row">
+@extends('admin.admin-home')
+
+@section('admin-content')
+<div class="row p-3">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2> Show Tiket Penerbangan</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('tiket_penerbangan.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('admin.page.maskapai.index') }}"> Back</a>
         </div>
     </div>
 </div>

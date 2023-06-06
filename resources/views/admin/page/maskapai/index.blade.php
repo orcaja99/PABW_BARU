@@ -1,41 +1,74 @@
 @extends('admin.admin-home')
 
 @section('admin-content')
-<section class="p-3">
-    <link href="/css/role.css" rel="stylesheet">
-        <div class="row align-items-center">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <h2>Maskapai</h2>
-            </div>
+<div class='row'>
+    <div class="col-lg-12 margin-tb">
+        <div class='pull-left'>
+            <h2>Daftar Tiket Penerbangan</h2>
         </div>
+        <div class='pull-right'>
+            @can('tiket_penerbangan-create')
+            <a class='btn btn-success' href="{{ route('tiket_penerbangans.create') }}">Tambah Tiket Penerbangan</a>
+            @endcan
+        </div>
+    </div>
+</div>
 
-            <div class="alert alert-success mt-3">
-                <p>message</p>
-            </div>
+@if ($message = Session::get('success'))
+<div class='alert alert-success'>
+    <p>{{ $message }}</p>
+</div>
+@endif
 
+<table class='table table-bordered'>
+    <tr>
+        <th>No</th>
+        <th>Kode</th>
+        <th>Model</th>
+        <th>Kelas</th>
+        <th>Asal</th>
+        <th>Tujuan</th>
+        <th>Waktu Berangkat</th>
+        <th>Waktu Sampai</th>
+        <th>Maskapai</th>
+        <th>Tanggal</th>
+        <th>Harga</th>
+        <th>status</th>
+        <th width='280px'>Action</th>
+    </tr>
+    @foreach ($tiket_penerbangans as $tiket_penerbangan)
+    <tr>
+        <td>{{ ++$i }}</td>
+        <td>{{ $tiket_penerbangan->kode_pesawat }}</td>
+        <td>{{ $tiket_penerbangan->model_pesawat }}</td>
+        <td>{{ $tiket_penerbangan->kelas }}</td>
+        <td>{{ $tiket_penerbangan->asal }}</td>
+        <td>{{ $tiket_penerbangan->tujuan }}</td>
+        <td>{{ $tiket_penerbangan->jam_berangkat }}</td>
+        <td>{{ $tiket_penerbangan->jam_tiba }}</td>
+        <td>{{ $tiket_penerbangan->maskapai }}</td>
+        <td>{{ $tiket_penerbangan->tanggal }}</td>
+        <td>{{ $tiket_penerbangan->harga }}</td>
+        <td>{{ $tiket_penerbangan->status }}</td>
+        <td>
+            <form action="{{ route('tiket_penerbangans.destroy',$tiket_penerbangan->id) }}" method='POST'>
+                <a class='btn btn-info' href="{{ route('tiket_penerbangans.show',$tiket_penerbangan->id) }}">Show</a>
+                @can('tiket_penerbangan-edit')
+                <a class='btn btn-primary' href="{{ route('tiket_penerbangans.edit',$tiket_penerbangan->id) }}">Edit</a>
+                @endcan
 
-        <table class="table table-bordered mt-3">
-            <tr>
-                <th>No</th>
-                <th>Maskapai</th>
-                <th>Email</th>
-                <th>Alamat</th>
-                <th>Telepon</th>
-                <th width="280px">Action</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <form action="/" method="POST">
-                        <a class="btn btn-primary" href="">Edit</a>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </section>
+                @csrf
+                @method('DELETE')
+                @can('tiket_penerbangan-delete')
+                <button type='submit' class='btn btn-danger'>Delete</button>
+                @endcan
+            </form>
+        </td>
+    </tr>
+    @endforeach
+
+</table>
+    
+    {!! $tiket_penerbangans->links() !!}
+
 @endsection

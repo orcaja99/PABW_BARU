@@ -33,7 +33,7 @@ class KursiController extends Controller
     {
 
         $tiket_penerbangans = tiket_penerbangan::latest()->paginate(5);
-        return view('tiket_penerbangan.index',compact('tiket_penerbangans'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('admin.page.maskapai.index',compact('tiket_penerbangans'))->with('i', (request()->input('page', 1) - 1) * 5);
         
     }
 
@@ -44,7 +44,7 @@ class KursiController extends Controller
      */
     public function create(): View
     {
-        return view('tiket_penerbangan.create');
+        return view('admin.page.maskapai.create');
 
     }
 
@@ -84,7 +84,7 @@ class KursiController extends Controller
      */
     public function show(tiket_penerbangan $tiket_penerbangan): View
     {
-        return view('tiket_penerbangan/show',compact('tiket_penerbangan'));
+        return view('admin.page.maskapai.show',compact('tiket_penerbangan'));
     }
 
     /**
@@ -95,7 +95,7 @@ class KursiController extends Controller
      */
     public function edit(tiket_penerbangan $tiket_penerbangan): View
     {
-        return view('tiket_penerbangan/edit',compact('tiket_penerbangan'));
+        return view('admin.page.maskapai.edit',compact('tiket_penerbangan'));
     }
 
     /**
@@ -108,7 +108,13 @@ class KursiController extends Controller
     public function update(Request $request, tiket_penerbangan $tiket_penerbangan): RedirectResponse
     {
         $request->validate([
-            'nama_tiket' => 'required',
+            'kode_pesawat' => 'required',
+            'model_pesawat' => 'required',
+            'kelas' => 'required',
+            'asal' => 'required',
+            'tujuan' => 'required',
+            'jam_berangkat' => 'required',
+            'jam_tiba' => 'required',
             'maskapai' => 'required',
             'tanggal' => 'required',
             'harga' => 'required',

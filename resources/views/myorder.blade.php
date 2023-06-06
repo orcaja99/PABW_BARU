@@ -9,22 +9,20 @@
           <div class="card">
             <div class="card-body">
               <nav class="nav flex-column nav-pills nav-gap-y-1">
-                <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
+              <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
+                <a href="profileuser">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-2">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>{{ Auth::user()->name }}
                 </a>
                 <a href="#TicketInPay" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                  <a href="saldo">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card mr-2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>TicketInPay
                 </a>
                 <a href="#pesanan" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                  <a href="myorder">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield mr-2">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Pesanan
                 </a>
-                <a href="#riwayatpemesanan" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell mr-2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>Riwayat Pemesanan
-                </a>
-                
               </nav>
             </div>
           </div>
@@ -56,7 +54,6 @@
                 <hr>
                 <form>
                   <div class="form-group mb-0">
-                    <label class="d-block">Sessions</label>
                     <p class="font-size-sm text-secondary">This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.</p>
                     <ul class="list-group list-group-sm">
                       <li class="list-group-item has-icon">
@@ -64,7 +61,7 @@
                           <h6 class="mb-0">San Francisco City 190.24.335.55</h6>
                           <small class="text-muted">Your current session seen in United States</small>
                         </div>
-                        <button class="btn btn-light btn-sm ml-auto" type="button">More info</button>
+                        <a class="btn btn-info" href="ticket">More Info</a>
                       </li>
                     </ul>
                   </div>

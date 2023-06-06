@@ -45,7 +45,7 @@ Route::get('admin/page/hotel', [PageController::class, 'hotel'])->name('admin.pa
 Route::get('admin/page/kamar_hotel/index_kamar_hotel', [ThController::class, 'index'])->name('admin.page.kamar_hotel.index_kamar_hotel');
 Route::get('/kamar_hotels', [ThController::class, 'index'])->name('kamar_hotels');
 
-Route::get('admin/page/maskapai/index', [PageController::class, 'maskapai'])->name('admin.page.maskapai.index');
+Route::get('admin/page/maskapai/index', [KursiController::class, 'index'])->name('admin.page.maskapai.index');
 
 Route::get('admin/page/roles/index', [RoleController::class, 'index'])->name('admin.page.roles.index');
 
@@ -127,6 +127,6 @@ Route::get('/pesanan-tiket-penerbangan/{id}', [PesanTiketController::class,'deta
 Route::post('/pesanan/create', [PesananController::class, 'createPesanan'])->name('pesanan.create');
 
 //test pemesanan
-Route::post('/bookings', [PesananController::class, 'store']);
-Route::post('/bookings/cancel', [PesananController::class, 'cancelpesanan']);
-Route::post('/bookings', [PesananController::class, 'store'])->name('bookings.store');
+Route::post('/homepage', [PesananController::class, 'store']);
+Route::post('/homepage/cancel', [PesananController::class, 'cancelpesanan']);
+Route::post('/homepage', [PesananController::class, 'store'])->name('store');

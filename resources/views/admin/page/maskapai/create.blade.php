@@ -1,13 +1,13 @@
-@extends('tiket_penerbangan.layout')
+@extends('admin.admin-home')
 
-@section('content')
+@section('admin-content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2> Tambah Tiket Penerbangan</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('tiket_penerbangans.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('admin.page.maskapai.index') }}"> Back</a>
         </div>
     </div>
 </div>
